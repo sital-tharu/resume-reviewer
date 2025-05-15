@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +13,13 @@
         <h2>Parsed Resume Content</h2>
         <pre>{{ content }}</pre>
         
-        <h2>AI Feedback</h2>
+        <h2>AI Feedback "Ollama" </h2>
         <div class="feedback">
             {% if feedback.score %}
                 <p><strong>Score:</strong> {{ feedback.score }}</p>
             {% endif %}
             <p>{{ feedback.comments }}</p>
         </div>
-        
         <a href="{{ url_for('app.upload_form') }}" class="btn">Upload Another Resume</a>
     </div>
 </body>
