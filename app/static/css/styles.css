@@ -1,55 +1,21 @@
+
 body {
-    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #a06df2 0%, #5b0da4 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+    min-height: 100vh;
 }
 
 h1 {
-    margin: 0;
-}
-
-form {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fd007a;
+    margin-bottom: 1.5rem;
 }
 
 input[type="file"] {
-    margin: 10px 0;
-}
-
-button {
-    background: #35424a;
-    color: #ffffff;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #45a049;
-}
-
-.result {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin-bottom: 1.5rem;
+    border: 2px solid #cdde13;
+    padding: 0.5rem;
+    border-radius: 6px;
+    width: 100%;
 }
