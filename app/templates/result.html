@@ -1,26 +1,22 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Feedback</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>AI Feedback on Your Resume</h1>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>AI Feedback on Your Resume</h1>
+    <section class="parsed-content-section">
         <h2>Parsed Resume Content</h2>
-        <pre>{{ content }}</pre>
-        
-        <h2>AI Feedback "Ollama" </h2>
+        <div class="parsed-content">
+            <pre>{{ content }}</pre>
+        </div>
+    </section>
+    <section class="feedback-section">
+        <h2>AI Feedback <span style="font-size:1rem; color:#a06df2;">Ollama</span></h2>
         <div class="feedback">
             {% if feedback.score %}
                 <p><strong>Score:</strong> {{ feedback.score }}</p>
             {% endif %}
             <p>{{ feedback.comments }}</p>
         </div>
-        <a href="{{ url_for('app.upload_form') }}" class="btn">Upload Another Resume</a>
-    </div>
-</body>
-</html>
+    </section>
+    <a href="{{ url_for('app.upload_form') }}" class="btn">Upload Another Resume</a>
+</div>
+{% endblock %}
