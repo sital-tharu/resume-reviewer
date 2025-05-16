@@ -14,7 +14,7 @@
             {% if feedback.score %}
                 <p><strong>Score:</strong> {{ feedback.score }}</p>
             {% endif %}
-            <p>{{ feedback.comments }}</p>
+            <div class="ai-feedback-content">{{ feedback.comments | safe }}</div>
         </div>
     </section>
     <a href="{{ url_for('app.upload_form') }}" class="btn">Upload Another Resume</a>

@@ -9,6 +9,7 @@ body {
 h1 {
     color: #fd007a;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 input[type="file"] {
@@ -23,15 +24,16 @@ input[type="file"] {
 
 .container {
     background: #fff;
-    max-width: 500px;
+    max-width: 900px;              /* Was 500px — increased width */
     margin: 3rem auto;
-    padding: 2rem 2.5rem;
+    padding: 2rem 3rem;            /* Slightly increased padding */
     border-radius: 18px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;       /* Better left-aligned for text-heavy content */
 }
+
 
 button, input[type="submit"] {
     background: linear-gradient(90deg, #fd007a 0%, #a06df2 100%);
@@ -121,4 +123,105 @@ label {
         padding: 0.7rem 0.5rem;
         font-size: 0.98rem;
     }
+}
+
+.ai-feedback-content {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: #2d1457;
+    margin-top: 0.5rem;
+}
+.ai-feedback-content h3, .ai-feedback-content h4 {
+    color: #a06df2;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+}
+.ai-feedback-content ul, .ai-feedback-content ol {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+.ai-feedback-content li {
+    margin-bottom: 0.4em;
+}
+.ai-feedback-content strong {
+    color: #fd007a;
+}
+.ai-feedback-content em {
+    color: #5b0da4;
+}
+/* Card effect for feedback */
+.feedback {
+    background: linear-gradient(120deg, #f3eaff 60%, #e9e4ff 100%);
+    border-left: 6px solid #a06df2;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px 0 rgba(160, 109, 242, 0.10);
+    padding: 2rem 2.2rem;
+    color: #222;
+    margin-bottom: 2rem;
+    font-size: 1.12rem;
+    position: relative;
+    transition: box-shadow 0.2s;
+}
+
+.feedback:hover {
+    box-shadow: 0 8px 32px 0 rgba(160, 109, 242, 0.18);
+}
+
+/* Section divider */
+.ai-feedback-content hr {
+    border: none;
+    border-top: 2px dashed #a06df2;
+    margin: 2em 0;
+}
+
+/* Icon badges for headings */
+.ai-feedback-content h3:before, .ai-feedback-content h4:before {
+    content: '💡 ';
+    font-size: 1.1em;
+    margin-right: 0.3em;
+    color: #fd007a;
+}
+
+.ai-feedback-content h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 0.7em;
+}
+
+.ai-feedback-content h4 {
+    font-size: 1.13em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.ai-feedback-content ul, .ai-feedback-content ol {
+    background: #f7f3ff;
+    border-radius: 8px;
+    padding: 1em 1.5em;
+    margin-bottom: 1.2em;
+    box-shadow: 0 1px 4px rgba(160, 109, 242, 0.05);
+}
+
+.ai-feedback-content li {
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+}
+
+.ai-feedback-content .highlight {
+    background: #fd007a22;
+    padding: 0.2em 0.5em;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #a06df2;
+    display: inline-block;
+}
+
+.ai-feedback-content strong {
+    color: #fd007a;
+    font-weight: 700;
+}
+
+.ai-feedback-content em {
+    color: #5b0da4;
+    font-style: italic;
 }
