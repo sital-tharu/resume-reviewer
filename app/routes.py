@@ -33,10 +33,10 @@ def upload_file():
     file = request.files['file']
     if file.filename == '' or not allowed_file(file.filename):
         return redirect(request.url)
-    
+
     # Automatically create the uploads folder if it doesn't exist
     os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-    
+
     filename = secure_filename(file.filename)  # Sanitize the filename
     file_path = os.path.join(UPLOAD_FOLDER, filename)  # Full path for saving
     file.save(file_path)  # Save the uploaded file
