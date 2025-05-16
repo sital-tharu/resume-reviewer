@@ -6,4 +6,4 @@ Werkzeug==2.2.2
 flask-wtf==1.0.0
 python-dotenv==0.20.0
 gunicorn==21.2.0
-
+PyPDF2==2.12.1
